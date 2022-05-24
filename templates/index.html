@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=5.0" />
+    <title>index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <h1>Test 1</h1>
+    <div class="container-fluid">
+      <table class=".container">
+        <thead>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Full Name</th>
+        </thead>
+        <tbody>
+          {%for user in users%}
+          <tr>
+            <td>{{user['first_name']}}</td>
+            <td>{{user['last_name']}}</td>
+            <td>{{user['first_name']}} {{user['last_name']}}</td>
+          </tr>
+          {%endfor%}
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
